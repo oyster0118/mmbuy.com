@@ -9,8 +9,5 @@
 - Handlebars模板引擎
 - less
 
-## 后端技术
-- PHP
-
 ## 前端自动化工具
 - Gulp

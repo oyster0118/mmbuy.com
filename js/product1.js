@@ -101,6 +101,7 @@ function getProductList(categoryid, pageid) {
                 console.log(this);
             })
             window.myFlag = true;
+            window.scrollTo(0, 0);
         }
 
     })
