@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买 网上比价</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="../css/base.less">
+    <link rel="stylesheet/less" href="../css/index.less">
+    <script src="../lib/less/less.js"></script>
+    <script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+    @@include('include/header.html')
+    <!--search end-->
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 0%;">
+
+        </div>
+    </div>
+    <!--menu start-->
+    <section id="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="#">
+                        <img src="../images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="#">
+                        <img src="../images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="#">
+                        <img src="../images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="#">
+                        <img src="../images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="#">
+                        <img src="../images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="#">
+                        <img src="../images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="#">
+                        <img src="../images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="#">
+                        <img src="../images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--menu end-->
+
+    <!--recommend start-->
+    <section id="recommend" class="clearfix">
+        <div class="recommend_title">
+            <a href="#">
+                <span>超级折扣推荐</span>
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+            </a>
+        </div>
+        <div class="recommend_product">
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">移动端凑单品：海天 鲜味 生抽 1.28L<span>1.12元</span></h4>
+                    <div class="other">
+                        <span class="other_shop">京东商城 | 10-25 14:10</span>
+                        <span class="other_talk"><i class="glyphicon glyphicon-sound-stereo"></i>1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">移动端凑单品：海天 鲜味 生抽 1.28L<span>1.12元</span></h4>
+                    <div class="other">
+                        <span class="other_shop">京东商城 | 10-25 14:10</span>
+                        <span class="other_talk"><i class="glyphicon glyphicon-sound-stereo"></i>1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="recommend_more">
+            <a href="#">更多优惠信息</a>
+        </div>
+        <div class="recommend_title">
+            <a href="#">
+                <span>品牌排行</span>
+                <img src="http://www.zuyushop.com/wap/images/more.png" alt="">
+            </a>
+        </div>
+    </section>
+    <!--recommend end-->
+
+    @@include('include/footer.html')
+</body>
+
+<!--menu template-->
+<script type="text/html" id="indexMenuTpl">
+    {{#each result }}
+    <div class="col-xs-3">
+        <a href="{{titlehref}}">
+                    {{{img}}}
+                    <p>{{name}}</p>
+                </a>
+    </div>
+    {{/each}}
+</script>
+<!--recommend template-->
+<script type="text/html" id="indexRecommendTpl">
+    {{#each result }}
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                    {{{productImgSm}}}
+                 </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{productName}}<span>{{productPinkage}}</span></h4>
+            <div class="other">
+                <span class="other_shop">{{productFrom}}| {{productTime}}</span>
+                <span class="other_talk"><i class="glyphicon glyphicon-sound-stereo"></i>{{productComCount}}</span>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script src="../js/handlebars-1.0.0.beta.6.js"></script>
+<script src="../lib/zepo/zepto.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../js/url.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/header_footer.js"></script>
+
+</html>

@@ -1,0 +1,256 @@
+@import "variable.less";
+body {
+    background-color: @bgColor;
+}
+
+
+/*header*/
+
+#header {
+    background-color: @headerColor;
+    height: 50px;
+    padding: 0 10px;
+    .logo {
+        height: 100%;
+        display: inline-block;
+        line-height: 50px;
+    }
+    .app {
+        float: right;
+        line-height: 50px;
+    }
+    img {
+        height: 25px;
+    }
+}
+
+
+/*search*/
+
+#search {
+    border-bottom: 1px solid @e6Color;
+    height: 50px;
+    padding: 10px;
+    background-color: @white;
+    position: relative;
+    input {
+        -webkit-appearance: none;
+        border: none;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 15px;
+        font-size: 16px;
+    }
+    input[type="text"] {
+        background: @f1Color;
+        margin: 0px;
+        padding: 0px;
+        width: 90%;
+        padding-left: 5%;
+    }
+    input[type="submit"] {
+        position: absolute;
+        right: 10px;
+        width: 63px;
+        background: @headerColor;
+        color: @white;
+    }
+}
+
+/*progressbar*/
+.progress{
+    margin-bottom: 0;
+    height: 4px;
+}
+
+
+
+/*menu*/
+
+#menu {
+    .container {
+        background-color: @white;
+        padding: 6px 15px;
+    }
+    .row {
+        margin: 16px 0px;
+        font-size: 0;
+        div {
+            text-align: center;
+            padding: 0;
+            p {
+                font-size: 13px;
+                margin-top: 3px;
+                color: #5a5a5a;
+            }
+        }
+    }
+    img {
+        height: 50px;
+    }
+}
+
+
+/*recommend*/
+
+#recommend {
+    margin-top: 4px;
+    .recommend_title {
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px;
+        padding-left: 10px;
+        color: @white;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+        img {
+            height: 20px;
+            float: right;
+            margin-right: 10px;
+            color: @white;
+            margin-top: 8px;
+        }
+        span {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 35px;
+            color: @white;
+        }
+    }
+    .recommend_product {
+        background-color: @white;
+        text-align: left;
+        font-size: 14px;
+        max-width: 960px;
+        margin: 0px auto;
+    }
+    .media {
+        padding: 14px 8px;
+        margin: 0;
+        border-bottom: 1px solid @a1Color;
+        .media-left {
+            float: left;
+            width: 110px;
+            img {
+                height: 100px;
+            }
+        }
+        .media-heading {
+            width: 100%;
+            min-height: 60px;
+            overflow: hidden;
+            font-size: 14px;
+            -webkit-line-clamp: 3; //行数
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            span {
+                color: @headerColor;
+            }
+        }
+        .other {
+            margin-top: 8px;
+            color: @a1Color;
+            font-size: 12px;
+            .other_shop {
+                float: left;
+            }
+            .other_talk {
+                float: right;
+            }
+        }
+    }
+    .recommend_more {
+        text-align: center;
+        width: 100%;
+        a {
+            display: block;
+            line-height: 30px;
+            background-image: linear-gradient(#ffffff, #f4f4f4);
+            font-size: 13px;
+            margin: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+        }
+    }
+}
+
+
+/*footer*/
+
+#footer {
+    .recommend_title {
+        margin-top: 10px;
+        margin-bottom: 6px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px;
+        padding-left: 10px;
+        color: @white;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+        img {
+            height: 20px;
+            float: right;
+            margin-right: 10px;
+            color: @white;
+            margin-top: 8px;
+        }
+        span {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 35px;
+            color: @white;
+        }
+    }
+    .login_box {
+        display: flex;
+        margin-top: 10px;
+        background: #efefef;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        .login,
+        .register {
+            flex: 3;
+            border-right: 1px solid #c4c4c4;
+        }
+        .go_Top {
+            flex: 4;
+            img {
+                height: 15px;
+                vertical-align: middle;
+                margin-top: -5px;
+                margin-right: 2px;
+            }
+        }
+    }
+    .login_button {
+        font-size: 12px;
+        text-align: center;
+        font-weight: 200;
+        p {
+            margin: 0;
+            &:first-child {
+                a {
+                    &:first-child {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#goTop {
+    display: inline-block;
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+}

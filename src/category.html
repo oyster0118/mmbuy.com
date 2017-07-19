@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="../css/base.less">
+    <link rel="stylesheet/less" href="../css/header_footer.less">
+    <link rel="stylesheet/less" href="../css/category.less">
+    <script src="../lib/less/less.js"></script>
+    <script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+
+    @@include('include/header.html')
+
+    <!--panel start-->
+    <section id="category" class="clearfix">
+        <div class="category-title">
+            <ul class="category-ul">
+                <li>
+                    <a href="#">大家电</a>
+                    <ul class="clearfix">
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">手机数码</a>
+                    <ul class="clearfix">
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--panel end-->
+
+    @@include('include/footer.html')
+
+</body>
+<!--动态获取大列表-->
+<script type="text/html" id="categoryTitleTpl">
+    {{#each result}}
+    <li>
+        <a href="#" data-list-id={{titleId}}>{{title}}</a>
+        <ul class="clearfix">
+
+        </ul>
+    </li>
+    {{/each}}
+</script>
+<!--categoryList 渲染-->
+<script type="text/html" id="categoryListTpl">
+    {{#each result}}
+    <li><a href="./product1.html?categoryid={{categoryId}}">{{category}}</a></li>
+    {{/each}}
+</script>
+<script src="../js/handlebars-1.0.0.beta.6.js"></script>
+<script src="../lib/zepo/zepto.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../js/url.js"></script>
+<script src="../js/category.js"></script>
+<script src="../js/header_footer.js"></script>
+
+</html>

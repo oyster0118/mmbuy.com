@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="../css/base.less">
+    <link rel="stylesheet/less" href="../css/header_footer.less">
+    <link rel="stylesheet/less" href="../css/product1.less">
+    <script src="../lib/less/less.js"></script>
+    <script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+    @@include('include/header.html')
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 0%;">
+
+        </div>
+    </div>
+    <nav id="nav">
+        <ol class="breadcrumb">
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./category.html">全部分类</a></li>
+            <li class="active">电视</li>
+        </ol>
+        <input type="button" value="筛选">
+    </nav>
+    <section id="product">
+        <div class="product-list">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="product-img">
+                            <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="">
+                        </div>
+                        <div class="product-text">
+                            <h5>长虹(CHANGHONG)55U3C 55英寸双64位4K安卓智能LED液晶电视
+
+                            </h5>
+                            <p>￥6388.00</p>
+                        </div>
+                        <div class="other">
+                            <span>报价(4)</span>
+                            <span>评论(1526)</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="page">
+                <span><a href="javascript:;" id="prev">上一页</a></span>
+                <span>
+                <select name="" id="pages">
+                    <option value="1">1</option>
+                     <option value="2">2</option>
+                </select>
+            </span>
+                <span><a href="javascript:;" id="next">下一页</a></span>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    @@include('include/footer.html')
+</body>
+<script type="text/template" id="productListTpl">
+    {{#each result}}
+    <li>
+        <a href="./product-details.html?productid={{productId}}">
+            <div class="product-img">
+                {{{productImg}}}
+            </div>
+            <div class="product-text">
+                <h5>
+                    {{productName}}
+                </h5>
+                <p>{{productPrice}}</p>
+            </div>
+            <div class="other">
+                <span>{{productQuote}}</span>
+                <span>{{productCom}}</span>
+            </div>
+        </a>
+    </li>
+
+    {{/each}}
+</script>
+<script src="../js/handlebars-1.0.0.beta.6.js"></script>
+<script src="../lib/zepo/zepto.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../js/url.js"></script>
+<script src="../js/product1.js"></script>
+<script src="../js/header_footer.js"></script>
+
+</html>

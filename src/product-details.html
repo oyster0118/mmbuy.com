@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="../css/base.less">
+    <link rel="stylesheet/less" href="../css/header_footer.less">
+    <link rel="stylesheet/less" href="../css/product-details.less">
+    <script src="../lib/less/less.js"></script>
+    <script src="../js/jquery.min.js"></script>
+</head>
+
+<body>
+    @@include('include/header.html')
+    <nav id="nav">
+        <ol class="breadcrumb">
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./category.html">全部分类</a></li>
+            <li class="active">电视</li>
+        </ol>
+        <input type="button" value="筛选">
+    </nav>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 0%;">
+
+        </div>
+    </div>
+    <section id="details">
+        <div class="detail-head">
+            <h4>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</h4>
+            <div class="pic">
+                <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视" width="170">
+            </div>
+        </div>
+        <div class="tabs">
+            <ul>
+                <li><a href="javascript:;" class="focus">比价搜索</a></li>
+                <li><a href="javascript:;">产品参数</a></li>
+                <li><a href="javascript:;">优选评价</a></li>
+            </ul>
+        </div>
+        <div class="price">
+            <div class="sup" class="clearfix">
+                <span class="website">京东商城</span>
+                <span class="buy">
+            ￥1999.00
+            <a href="#">去购买</a>
+          </span>
+            </div>
+            <div class="sub">
+                <p>实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟</p>
+            </div>
+        </div>
+
+        <div class="comments">
+            <div class="comments-title">
+                网友评价
+            </div>
+            <div class="des-wrap">
+                <div class="des">
+                    <div class="des-top">
+                        <p>
+                            <span class="comName">hahaha</span>
+                            <span class="comTime">2046</span>
+                        </p>
+                        <p class="comFrom">goudong</p>
+                    </div>
+                    <div class="comContent">
+                        11111111111111111111111111111111111111
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="more">
+            <button type="button" class="btn btn-default">查看更多评价</button>
+        </div>
+    </section>
+
+
+    @@include('include/footer.html')
+</body>
+<script type="text/template" id="productTpl">
+    {{#each result}}
+    <h4>{{productName}}</h4>
+    <div class="pic">
+        {{{productImg}}}
+    </div>
+    {{/each}}
+</script>
+
+<script type="text/template" id="commentTpl">
+    {{#each result}}
+    <div class="des">
+        <div class="des-top">
+            <p>
+                <span class="comName">{{comName}}</span>
+                <span class="comTime">{{comTime}}</span>
+            </p>
+            <p class="comFrom">{{comFrom}}</p>
+        </div>
+        <div class="comContent">
+            {{comContent}}
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+<script src="../js/handlebars-1.0.0.beta.6.js"></script>
+<script src="../lib/zepo/zepto.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../js/url.js"></script>
+<script src="../js/product-details.js"></script>
+<script src="../js/header_footer.js"></script>
+
+</html>
