@@ -5,17 +5,17 @@
   margin-bottom: 0;
 }
 #nav input {
-  width: 60px;
-  height: 28px;
+  width: 3.75rem;
+  height: 1.75rem;
   position: absolute;
-  top: 4px;
+  top: .25rem;
   right: 0;
-  margin-right: 10px;
+  margin-right: .625rem;
   border-radius: 8px;
   border: 0;
 }
 #product .product-list {
-  padding: 10px;
+  padding: .625rem;
   background-color: #fff;
 }
 #product .product-list ul li {
@@ -28,54 +28,54 @@
   float: left;
 }
 #product .product-list ul li a .product-img img {
-  height: 100px;
+  height: 6.25rem;
 }
 #product .product-list ul li a .product-text {
-  padding-left: 110px;
+  padding-left: 6.875rem;
 }
 #product .product-list ul li a .product-text h5 {
-  min-height: 44px;
-  line-height: 22px;
+  min-height: 2.75rem;
+  line-height: 1.375rem;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: .875rem;
   overflow: hidden;
   -webkit-line-clamp: 2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
 #product .product-list ul li a .product-text p {
-  margin: 0 0 10px;
+  margin: 0 0 .625rem;
   color: red;
   font-weight: 700;
 }
 #product .product-list ul li a .other {
-  font-size: 12px;
+  font-size: .75rem;
   color: #a1a1a1;
 }
 #product .product-list .page {
-  height: 33px;
+  height: 2.0625rem;
 }
 #product .product-list .page span {
   text-align: center;
   float: left;
-  height: 33px;
+  height: 2.0625rem;
   width: 33.33%;
 }
 #product .product-list .page span a {
   display: inline-block;
-  width: 62px;
-  height: 29px;
-  line-height: 29px;
+  width: 3.875rem;
+  height: 1.8125rem;
+  line-height: 1.8125rem;
   background-color: #ccc;
-  border-radius: 6px;
+  border-radius: .375rem;
 }
 #product .product-list .page span select {
-  padding: 0 17px;
-  height: 30px;
+  padding: 0 1.0625rem;
+  height: 1.875rem;
 }
 /*progressbar*/
 .progress {
   margin-bottom: 0;
-  height: 4px;
+  height: .25rem;
 }

@@ -3,24 +3,135 @@ body {
     background-color: @bgColor;
 }
 
+//media query
+@media only screen and (max-width: 1080px),
+only screen and (max-device-width:1080px) {
+    html,
+    body {
+        font-size: 33.75px;
+    }
+}
 
+@media only screen and (max-width: 960px),
+only screen and (max-device-width:960px) {
+    html,
+    body {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 800px),
+only screen and (max-device-width:800px) {
+    html,
+    body {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 720px),
+only screen and (max-device-width:720px) {
+    html,
+    body {
+        font-size: 22.5px;
+    }
+}
+
+@media only screen and (max-width: 640px),
+only screen and (max-device-width:640px) {
+    html,
+    body {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px),
+only screen and (max-device-width:600px) {
+    html,
+    body {
+        font-size: 18.75px;
+    }
+}
+
+@media only screen and (max-width: 540px),
+only screen and (max-device-width:540px) {
+    html,
+    body {
+        font-size: 16.875px;
+    }
+}
+
+@media only screen and (max-width: 480px),
+only screen and (max-device-width:480px) {
+    html,
+    body {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 414px),
+only screen and (max-device-width:414px) {
+    html,
+    body {
+        font-size: 12.9375px;
+    }
+}
+
+@media only screen and (max-width: 400px),
+only screen and (max-device-width:400px) {
+    html,
+    body {
+        font-size: 12.5px;
+    }
+}
+
+@media only screen and (max-width: 375px),
+only screen and (max-device-width:375px) {
+    html,
+    body {
+        font-size: 11.71875px;
+    }
+}
+
+@media only screen and (max-width: 360px),
+only screen and (max-device-width:360px) {
+    html,
+    body {
+        font-size: 11.25px;
+    }
+}
+
+@media only screen and (max-width: 320px),
+only screen and (max-device-width:320px) {
+    html,
+    body {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 240px),
+only screen and (max-device-width:240px) {
+    html,
+    body {
+        font-size: 7.5px;
+    }
+}
 /*header*/
 
 #header {
     background-color: @headerColor;
-    height: 50px;
-    padding: 0 10px;
+    height: 3.125rem;
+    padding: 0 .625rem;
     .logo {
         height: 100%;
         display: inline-block;
-        line-height: 50px;
+        line-height: 3.125rem;
     }
     .app {
         float: right;
-        line-height: 50px;
+        line-height: 3.125rem;
     }
     img {
-        height: 25px;
+        height: 1.5625rem;
     }
 }
 
@@ -29,17 +140,17 @@ body {
 
 #search {
     border-bottom: 1px solid @e6Color;
-    height: 50px;
-    padding: 10px;
+    height: 3.125rem;
+    padding: .625rem;
     background-color: @white;
     position: relative;
     input {
         -webkit-appearance: none;
         border: none;
-        height: 30px;
-        line-height: 30px;
+        height: 1.875rem;
+        line-height: 1.875rem;
         border-radius: 15px;
-        font-size: 16px;
+        font-size: 1rem;
     }
     input[type="text"] {
         background: @f1Color;
@@ -50,8 +161,8 @@ body {
     }
     input[type="submit"] {
         position: absolute;
-        right: 10px;
-        width: 63px;
+        right: .625rem;
+        width: 3.9375rem;
         background: @headerColor;
         color: @white;
     }
@@ -59,36 +170,36 @@ body {
 
 #footer {
     .recommend_title {
-        margin-top: 10px;
-        margin-bottom: 6px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 18px;
-        padding-left: 10px;
+        margin-top: .625rem;
+        margin-bottom: .375rem;
+        height: 2.1875rem;
+        line-height: 2.1875rem;
+        font-size: 1.125rem;
+        padding-left: .625rem;
         color: @white;
         background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
         img {
-            height: 20px;
+            height: 1.25rem;
             float: right;
-            margin-right: 10px;
+            margin-right: .625rem;
             color: @white;
-            margin-top: 8px;
+            margin-top: .5rem;
         }
         span {
-            font-size: 18px;
+            font-size: 1.125rem;
             font-weight: bold;
-            line-height: 35px;
+            line-height: 2.1875rem;
             color: @white;
         }
     }
     .login_box {
         display: flex;
-        margin-top: 10px;
+        margin-top: .625rem;
         background: #efefef;
         border-top: 1px solid #c4c4c4;
         border-bottom: 1px solid #c4c4c4;
-        height: 34px;
-        line-height: 34px;
+        height: 2.125rem;
+        line-height: 2.125rem;
         text-align: center;
         .login,
         .register {
@@ -98,15 +209,15 @@ body {
         .go_Top {
             flex: 4;
             img {
-                height: 15px;
+                height: .9375rem;
                 vertical-align: middle;
-                margin-top: -5px;
-                margin-right: 2px;
+                margin-top: -0.3125rem;
+                margin-right: .125rem;
             }
         }
     }
     .login_button {
-        font-size: 12px;
+        font-size: .75rem;
         text-align: center;
         font-weight: 200;
         p {
@@ -125,13 +236,14 @@ body {
 #goTop {
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 1.25rem;
     right: 0;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
     background-color: rgba(255, 255, 255, .6);
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
 }
+
