@@ -42,6 +42,7 @@ function getProductTitle(productid) {
             $(".active").html(subTitle);
             var mytpl = Handlebars.compile($("#productTpl").html());
             $(".detail-head").html(mytpl(data));
+            $(".sup").html(data.result[0].bjShop);
         }
     })
 
